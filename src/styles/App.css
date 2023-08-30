@@ -47,6 +47,10 @@ font-weight: bold;
        
 }
 
-#results-dropdown *{
+input[type="text"]{
+    color:black;
+}
+
+#results-dropdown > p{
     color: black;
 }
