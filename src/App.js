@@ -2,16 +2,21 @@ import React from 'react'
 import Mainapp from './components/Mainapp.js';
 import {BrowserRouter as Router} from 'react-router-dom';
 import "../src/styles/App.css"
+import { ThemeContextProvider } from './components/Contexts/ThemeContext.js';
 
 
 const App = () => {
+  
+
   return (
-    <div className='app-bg'>
-        <Router>
-          <Mainapp/>
-        </Router>
-    
-    </div>
+
+     <ThemeContextProvider>
+     
+          <Router>
+            <Mainapp/>
+          </Router>
+      
+  </ThemeContextProvider>
   )
 }
 

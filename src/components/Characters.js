@@ -1,10 +1,10 @@
 import React,{ useEffect,useState } from 'react'
 
 
-function Characters() {
+function Character_details(props) {
   return (
-    <div>Characters</div>
+    <div>Character name:{props.name}</div>
   )
 }
 
-export default Characters
+export default Character_details

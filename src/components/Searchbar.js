@@ -1,6 +1,8 @@
 
 import '../styles/App.css'
 import React,{ useEffect,useState } from 'react' 
+import Character_details from './Characters';
+import SearchIcon from '@mui/icons-material/Search';
 
 function Searchbar() {
  
@@ -62,17 +64,31 @@ let SearchResults=names.filter(filterSearch).map(name=>{
                           })
 
 
+  function SubmitCharacter(queryname){
+    let Character={}
+    for(let x=0;x<characters.length;x++){
+      if (characters[x].name===queryname){
+         Character=characters[x];
+         break
+      }
+    } 
+    console.log(Character)
+  
+  }
+
+
   return (
     <React.Fragment>
 
             <span>
                 <input type='text' value={SearchQuery} onChange={HandleChange} placeholder="search..."/>
+               
             </span>
-                            
+            <SearchIcon onClick={()=>SubmitCharacter(SearchQuery)}/>
+                      
            {show? <div id="results-dropdown">
                     {SearchResults}
                     </div>:
-                    
                     <div></div>}
 
 

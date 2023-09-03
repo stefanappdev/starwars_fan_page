@@ -9,26 +9,20 @@ color:white;
 font-weight: bold;
 }
 
-.app-bg{
+.app-bg-dark{
     background:url('/public/images/star-wars\ canva\ custom.png') ;
     height:1000px;
     background-size:100% 100% ;
     background-repeat: no-repeat;
 }
 
-#anikin_vs_obiwan{
-    height: 250px;
-    width: 300px;
-    position: relative;
-    top:-50px;
-    left: 500px;
+.app-bg-light{
+    background:url('/public/images/Star_Wars_logo-light.png') ;
+    height:1000px;
+    background-size:100% 100% ;
+    background-repeat: no-repeat;
 }
 
-#anikin_vs_obiwan_img{
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-}
 
 
 #Searchbar_Navbar_container{
@@ -44,8 +38,10 @@ font-weight: bold;
     position: relative;
     top:20px;
     right:180px;
-       
+         
 }
+
+
 
 input[type="text"]{
     color:black;
