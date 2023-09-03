@@ -34,7 +34,6 @@ const Mainapp = () => {
                   onClick={()=>Theme.setTheme()} 
                   style={{borderRadius:"5px",color:"black"}}>
                     {Theme.isDark?"Currently in Dark mode":"Currently in light mode"}
-                  
                 </button>
       
 
