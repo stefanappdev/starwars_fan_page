@@ -1,8 +1,9 @@
 import React from 'react'
 import Mainapp from './components/Mainapp.js';
-import {BrowserRouter as Router} from 'react-router-dom';
 import "../src/styles/App.css"
 import { ThemeContextProvider } from './components/Contexts/ThemeContext.js';
+import { CharacterContextProvider } from './components/Contexts/CharacterContext.js';
+
 
 
 const App = () => {
@@ -11,11 +12,9 @@ const App = () => {
   return (
 
      <ThemeContextProvider>
-     
-          <Router>
-            <Mainapp/>
-          </Router>
-      
+      <CharacterContextProvider>
+          <Mainapp/>
+      </CharacterContextProvider>
   </ThemeContextProvider>
   )
 }

@@ -1,11 +1,15 @@
 
 import '../styles/App.css'
 import React,{ useEffect,useState } from 'react' 
-import Character_details from './Characters';
 import SearchIcon from '@mui/icons-material/Search';
+import { useCharacterContext } from './Contexts/CharacterContext';
+import { useThemeContext } from './Contexts/ThemeContext';
+
+
 
 function Searchbar() {
- 
+  let Theme=useThemeContext()
+  let CharacterContext=useCharacterContext()
   const[SearchQuery,setSearchQuery]=useState("");
   let [characters,setcharacters]=useState([]);
   const[show,setshow]=useState(false);
@@ -64,16 +68,15 @@ let SearchResults=names.filter(filterSearch).map(name=>{
                           })
 
 
-  function SubmitCharacter(queryname){
-    let Character={}
+  function SubmitCharacter(){
+    
     for(let x=0;x<characters.length;x++){
-      if (characters[x].name===queryname){
-         Character=characters[x];
+      if (characters[x].name===SearchQuery){
+         CharacterContext.SetCharacter(characters[x])
          break
       }
     } 
-    console.log(Character)
-  
+   console.log(CharacterContext.Character)
   }
 
 
@@ -84,7 +87,7 @@ let SearchResults=names.filter(filterSearch).map(name=>{
                 <input type='text' value={SearchQuery} onChange={HandleChange} placeholder="search..."/>
                
             </span>
-            <SearchIcon onClick={()=>SubmitCharacter(SearchQuery)}/>
+            <SearchIcon sx={{color:Theme.isDark?"white":"darkblue"}}onClick={()=>SubmitCharacter()}/>
                       
            {show? <div id="results-dropdown">
                     {SearchResults}
