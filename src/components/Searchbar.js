@@ -83,17 +83,17 @@ let SearchResults=names.filter(filterSearch).map(name=>{
   return (
     <React.Fragment>
 
-            <span>
+              <span>
                 <input type='text' value={SearchQuery} onChange={HandleChange} placeholder="search..."/>
-               
-            </span>
-            <SearchIcon sx={{color:Theme.isDark?"white":"darkblue"}}onClick={()=>SubmitCharacter()}/>
+               </span>
+            
+            <SearchIcon sx={{color:Theme.isDark?"white":"darkblue",display:"inline",marginTop:"2px",paddingLeft:"2px"}}onClick={()=>SubmitCharacter()}/>
                       
            {show? <div id="results-dropdown">
                     {SearchResults}
                     </div>:
                     <div></div>}
-
+            
 
     </React.Fragment>
   )

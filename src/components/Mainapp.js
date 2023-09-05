@@ -18,16 +18,21 @@ const Mainapp = () => {
   return (
     
   <div className={Theme.isDark?'app-bg-dark':"app-bg-light"}>
+      <main>
+        <section class="header">
+          <div id="Searchbar_Navbar_container">
+
+                <Searchbar/>
+                
+            </div>
+              <Themecontrols/>
+        </section>
  
-     <div id="Searchbar_Navbar_container">
-
-          <Searchbar/>
-
-      </div>
-
-      <Themecontrols/>
-
-      <Character_details character={CharacterContext.Character}/>
+          <Character_details character={CharacterContext.Character}/>
+        
+      
+    </main>
+     
   </div>
   )
 }

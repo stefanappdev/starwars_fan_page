@@ -12,7 +12,7 @@ return (<div className='ThemeContainer'>
                     <button  
 
                     onClick={()=>Theme.setTheme()} 
-                    style={{borderRadius:"5px",color:"black"}}>
+                    style={{borderRadius:"5px", marginLeft:"5px", display:"inline",color:"black"}}>
                         {Theme.isDark?<Brightness5Icon/>
                         :<DarkModeIcon/>}
                     

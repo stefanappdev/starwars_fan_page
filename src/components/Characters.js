@@ -26,14 +26,8 @@ function Character_details({character}) {
       <div className='character-bio'>
         <h2 style={style}>Chracter Bio</h2>
             <span style={style}>Gender:{character.gender}</span>
-            <br/>  
-            <br/>
             <span style={style}>Date of Birth:{character.birth_year}</span>
-            <br/>  
-            <br/>
             <span style={style}>Hair Color:{character.hair_color}</span>
-            <br/>  
-            <br/>
             <span style={style}>Skin Color:{character.skin_color}</span>
       </div>
 
