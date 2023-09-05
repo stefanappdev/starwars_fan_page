@@ -1,59 +1,162 @@
-
-
-a{
-margin:5px;
-color:white;
-font-weight: bold;
-}
-
-.app-bg-dark{
-    background:url('/public/images/star-wars\ canva\ custom.png') ;
-    height:1000px;
-    background-size:100% 100% ;
-    background-repeat: no-repeat;
-}
-
-.app-bg-light{
-    background:url('/public/images/Star_Wars_logo-light.png') ;
-    height:1000px;
-    background-size:100% 100% ;
-    background-repeat: no-repeat;
-}
-
-
-
-#Searchbar_Navbar_container{
-    display:inline-flex;
-    padding: 20px;
+@media screen and (min-width:700px) and (max-width:1440px) {
     
+
+
+        a{
+        margin:5px;
+        color:white;
+        font-weight: bold;
+        }
+
+        .app-bg-dark{
+            background:url('/public/images/star-wars\ canva\ custom.png') ;
+            height:1000px;
+            background-size:100% 100% ;
+            background-repeat: no-repeat;
+        }
+
+        .app-bg-light{
+            background:url('/public/images/Star_Wars_logo-light.png') ;
+            height:1000px;
+            background-size:100% 100% ;
+            background-repeat: no-repeat;
+        }
+
+
+
+        #Searchbar_Navbar_container{
+            display:inline-flex;
+            padding: 20px;
+            
+        }
+
+        #search-icon{
+            margin-left:5px;
+        }  
+
+        #results-dropdown{
+            display: inline-block;
+            background-color: white;
+            width: 180px;
+            position: relative;
+            top:20px;
+            right:180px;
+                
+        }
+
+        #theme-controls{
+            position: relative;
+            bottom: 60px;
+            left:500px;
+        }
+
+
+
+        input[type="text"]{
+            color:black;
+        }
+
+        #results-dropdown > p{
+            color: black;
+        }
+
+
+        .character-img-container>img{
+            border-radius: 50%;
+            height: 250px;
+            width: 250px;
+            position: relative;
+            bottom:110px;
+            right:250px;
+            float:right;
+        }
+
+
+        .ThemeContainer{
+          
+            display: inline;
+        }
+
 }
 
-#search-icon{
-    margin-left:5px;
-}  
 
-#results-dropdown{
-    display: inline-block;
-    background-color: white;
-    width: 180px;
-    position: relative;
-    top:20px;
-    right:180px;
-         
-}
-
-#theme-controls{
-    position: relative;
-    bottom: 60px;
-    left:500px;
-}
+@media screen and  (min-width:350px)and (max-width:699px) {
 
 
+    a{
+        margin:5px;
+        color:white;
+        font-weight: bold;
+        }
 
-input[type="text"]{
-    color:black;
-}
+        .app-bg-dark{
+            background:url('/public/images/star-wars\ canva\ custom.png') ;
+            height: 650px;
+            background-size:100% 100% ;
+            background-repeat: no-repeat;
+        }
+            
 
-#results-dropdown > p{
-    color: black;
+        .app-bg-light{
+            background:url('/public/images/Star_Wars_logo-light.png') ;
+            height:650px;
+            background-size:100% 100% ;
+            background-repeat: no-repeat;
+      
+        }
+
+
+
+        #Searchbar_Navbar_container{
+            display:inline-flex;
+            padding: 20px;
+            
+        }
+
+        #search-icon{
+            margin-left:5px;
+        }  
+
+        #results-dropdown{
+            display: inline-block;
+            background-color: white;
+            width: 180px;
+            position: relative;
+            top:20px;
+            right:180px;
+                
+        }
+
+        #theme-controls{
+            position: relative;
+            bottom: 60px;
+            left:500px;
+        }
+
+
+
+        input[type="text"]{
+            color:black;
+        }
+
+        #results-dropdown > p{
+            color: black;
+        }
+
+
+        .character-img-container>img{
+            border-radius: 50%;
+        
+        }
+
+
+        .ThemeContainer{
+          
+            display: inline;
+        }
+
+
+
+
+
 }

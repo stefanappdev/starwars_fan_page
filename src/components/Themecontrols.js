@@ -1,18 +1,20 @@
 import React from 'react'
 import { useThemeContext } from './Contexts/ThemeContext';
-
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import Brightness5Icon from '@mui/icons-material/Brightness5';
 const Themecontrols=()=>{
 
 
 const Theme=useThemeContext()
 
-return (<div>
+return (<div className='ThemeContainer'>
 
                     <button  
 
                     onClick={()=>Theme.setTheme()} 
                     style={{borderRadius:"5px",color:"black"}}>
-                        {Theme.isDark?"Currently in Dark mode":"Currently in light mode"}
+                        {Theme.isDark?<Brightness5Icon/>
+                        :<DarkModeIcon/>}
                     
                     </button>
         

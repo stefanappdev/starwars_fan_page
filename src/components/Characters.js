@@ -1,22 +1,42 @@
 import React,{ useEffect,useState } from 'react'
 import { useThemeContext } from './Contexts/ThemeContext';
+import { Padding } from '@mui/icons-material';
 
 function Character_details({character}) {
   let theme=useThemeContext()
 
   let style={
-    color:theme.isDark?'white':"black"
+    color:theme.isDark?'white':"black",
+    padding:'20px',
+    fontWeight:'bold'
   }
 
-  let src=`/images/characters/${character.name}.jpg`
-
+  let src=`/images/characters/${character.name}.png`
+  let alt=`picture of ${character.name}`
   return (
     <React.Fragment>
-      <h1 style={style}>Character name:{character.name}</h1>
       
-      <div className='character-img'>
-          <img src={src}/>
+      
+                 <h1 style={style}>{character.name?`${character.name}`:""}</h1>
+      
+      <div className='character-img-container'>
+          <img src={src} alt={alt}/>
       </div>
+
+      <div className='character-bio'>
+        <h2 style={style}>Chracter Bio</h2>
+            <span style={style}>Gender:{character.gender}</span>
+            <br/>  
+            <br/>
+            <span style={style}>Date of Birth:{character.birth_year}</span>
+            <br/>  
+            <br/>
+            <span style={style}>Hair Color:{character.hair_color}</span>
+            <br/>  
+            <br/>
+            <span style={style}>Skin Color:{character.skin_color}</span>
+      </div>
+
     </React.Fragment>
   )
 }
