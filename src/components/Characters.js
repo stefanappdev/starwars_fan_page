@@ -19,17 +19,17 @@ function Character_details({character}) {
       
                  <h1 style={style}>{character.name?`${character.name}`:""}</h1>
       
-      <div className='character-img-container'>
+      {character.name&&<div className='character-img-container'>
           <img src={src} alt={alt}/>
-      </div>
+      </div>}
 
-      <div className='character-bio'>
-        <h2 style={style}>Chracter Bio</h2>
+      {character.name&&<div className='character-bio'>
+        <h2 style={style}>Character Bio</h2>
             <span style={style}>Gender:{character.gender}</span>
-            <span style={style}>Date of Birth:{character.birth_year}</span>
+            <span style={style}>DOB:{character.birth_year}</span>
             <span style={style}>Hair Color:{character.hair_color}</span>
             <span style={style}>Skin Color:{character.skin_color}</span>
-      </div>
+      </div>}
 
     </React.Fragment>
   )

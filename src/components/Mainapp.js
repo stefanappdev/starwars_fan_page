@@ -28,9 +28,18 @@ const Mainapp = () => {
               <Themecontrols/>
         </section>
  
+        {CharacterContext.Character&&
           <Character_details character={CharacterContext.Character}/>
-        
-      
+          }
+
+
+          {!CharacterContext.Character.name&&<div id="yoda"> 
+             <img id="yoda-img" src="/images/Yoda.jpeg" alt="listen to master yoda"/>
+              <p id="yoda-text" style={{color:Theme.isDark?"white":"black"}}>
+                Use the searchbar you must to find your favorite character</p>
+          </div>}
+ 
+
     </main>
      
   </div>

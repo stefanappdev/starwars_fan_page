@@ -21,12 +21,14 @@ function Searchbar() {
       setshow(true);
   }
 
+  //method to search
   const filterSearch=(input)=>{
       if (SearchQuery.includes(input[0].toLowerCase())){ 
         return true
       }
   }
 
+  //method to fetch a given character from swapi(Star Wars API)
   const fetchCharacters=async(url)=>{
       await fetch(url,{
       method:'GET', 
@@ -49,8 +51,10 @@ function Searchbar() {
     })
 }
 
+
+///fetching data from swapi(Star Wars API)
   useEffect(()=>{
-    fetchCharacters("https://swapi.dev/api/people?/page=1")
+    fetchCharacters(process.env.REACT_APP_SWAPI_URL)
  .catch(err=>{
    console.log('Something went wrong',err.message)
  })
